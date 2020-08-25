@@ -1,0 +1,26 @@
+.nav {
+  height: 12vh;
+  // margin-top: 1vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__item-list {
+    display: flex;
+    width: 20%;
+    justify-content: space-evenly;
+    align-items: center;
+
+    & > * {
+       margin-left: .5rem;
+    }
+  }
+}
+
+
+
+.site-logo {
+  height: 12vh;
+  cursor: pointer;
+}

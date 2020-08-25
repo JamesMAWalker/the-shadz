@@ -1,0 +1,41 @@
+.side-nav {
+  height: 88vh;
+  width: 15%;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 2rem;
+
+  & > * {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: #000;
+      height: 1px;
+      width: 75%;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: all .6s;
+    }
+
+    &:hover {
+      transition: all .4s;
+      
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .nav-item {
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+}

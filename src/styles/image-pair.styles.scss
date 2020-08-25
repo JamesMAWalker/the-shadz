@@ -1,0 +1,25 @@
+.splash-container {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  & > * {
+    border: 1px solid #000;
+    object-fit: cover;
+  }
+
+}
+
+.splash-right {
+  height: 100%;
+  width: 45%;
+  object-position: top;
+}
+
+.splash-left {
+  height: 90%;
+  width: 42%;
+}
+
