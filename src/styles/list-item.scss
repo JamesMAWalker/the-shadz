@@ -1,23 +1,61 @@
 .list-item {
+  position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  transition: all 1s;
+
+  // Todo : Still needs to have no bg image until hovered (change e.target.style to photo[1] on mouseOver). Also need to add the transparent bg square to the product details, as well as change their color. 
+  &:hover {
+    .product-photo {
+      opacity: 0;
+    }
+
+    .item-details {
+      background-color: rgba(192, 192, 192, 0.45);
+      padding: 1rem;
+    }
+
+    .item-details,
+    .item-title {
+      color: white;
+    }
+
+    .item-title::after {
+      background-color: white;
+    }
+  }
 
   .product-photo {
     height: 60%;
-    width: 100%;
-    background-image: url('../assets/../assets/products/product-thumbs/3-plain.jpg');
+    width: 60%;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    object-fit: contain;
+    object-position: center;
+
+    &:hover {
+      opacity: 0;
+    }
   }
 
   .item-details {
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
     display: flex;
     flex-flow: column;
     align-self: flex-start;
-    padding: 1rem;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -27,6 +65,7 @@
     padding-bottom: .5rem;
     font-weight: bold;
     text-decoration: none;
+    text-transform: uppercase;
     color: #000;
 
     &::after {

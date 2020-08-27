@@ -13,11 +13,11 @@ export default function HomePage() {
         <SectionProvider>
           <Navbar />
           <div className='center-container'>
-              <SideNav />
-              <PageContainer />
-              </div>
-              <Footer />
-          </SectionProvider>
+            <SideNav />
+            <PageContainer />
+          </div>
+          <Footer />
+        </SectionProvider>
       </div>
   );
 }
